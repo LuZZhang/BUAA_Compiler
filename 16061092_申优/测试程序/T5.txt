@@ -1,0 +1,168 @@
+const int outest_cons_num=5;
+const char out_cons_sin_c = 'e';
+const int cons_out_int_num1=12;const int cons_out_int_num2=55;
+const char outest_cons_char = '+';
+const int abb = +2,bcb = -234;
+const char char2 = '_';
+const char outest_cons_char2 = 'z';
+int outest_var_num,nnn;
+char outest_var_char;
+char outer_char[20];
+char out_sin_c;
+int var_out_array_int1[100],var_out_array_int2[200];
+int var_out_int_num1,var_out_int_num2;
+char var_out_char;
+
+int gcd(int m,int n){
+	int r,q; 
+	q = m/n;
+	r = m - q*n;
+	if(r==0) return (n);
+	else gcd(n,r); 
+}
+
+void test_gcd{
+	int m[67],n[87],res[344],swap,i,j;
+	int mm,nn;
+    	printf("<---test_gcd");
+	;
+	for(i = 0;i<outest_cons_num;i=i+1){
+		scanf(mm,nn);
+		m[i]=mm;
+		n[i]=nn;
+	}
+	j=0;
+	while(j < outest_cons_num) {
+		if(m[j]>n[j])
+		{
+			swap = m[j];
+			m[j] = n[j];
+			n[j] = swap;
+		}
+		res[j] = gcd(m[j],n[j]);
+       	j = j + 1;
+	}
+	for(i = 0;i<outest_cons_num;i=i+1){
+		printf("res[",i);
+		printf("]=",res[i]);
+		printf(" ");
+	}
+	printf("test_gcd--->");
+}
+
+void test_array{
+	const int cons_arr_int_num1=0;
+	int var_arr_int_num1,i;
+	int var_arr_int_array[100];
+	printf("<---test_array");
+	var_arr_int_num1=2;
+    var_arr_int_array[2]=1;
+    var_arr_int_array[4]=var_arr_int_num1;
+    var_arr_int_array[3*var_arr_int_num1]=var_arr_int_array[4];
+    printf("<--1_local_array-->",var_arr_int_num1);
+    printf("<--2_local_array-->",2*var_arr_int_num1);
+    printf("<--3_local_array-->",var_arr_int_array[var_arr_int_num1]);
+    printf("<--4_local_array-->",var_arr_int_array[2*var_arr_int_num1]);
+    printf("<--5_local_array-->",var_arr_int_array[3*var_arr_int_num1]);
+    for(i=0;i<5;i=i+1){
+    	var_out_array_int1[i]=i*i-i;
+    	var_out_array_int2[i]=i;
+    }
+    for(i=4;i>=0;i=i-1){
+    	printf("<--i=",i);
+    	printf("<--out_a1-->",var_out_array_int1[i]);
+    	printf("<--out_a2-->",var_out_array_int2[i]);
+    	printf("-->");
+    }
+    printf("<--array_out_gcd_2=",gcd(var_out_array_int1[2],var_out_array_int1[4]));
+    printf("array_out_gcd_2-->");
+    printf("<--array_local_gcd_1=",gcd(var_arr_int_array[2],var_arr_int_array[4]));
+    printf("array_local_gcd_1-->test_array--->");
+}
+
+int test_calr(int para_calr_1,int para_calr_2){
+	const int cons_calr_int1=123;
+	const int cons_calr_int2=321;
+	int var_calr_int1;
+	int var_calr_int2;
+	var_calr_int1=cons_calr_int1*para_calr_1-234;
+	var_calr_int2=78/para_calr_2;
+	printf("!start!");
+	printf("<---1calr--->",var_calr_int1);
+	printf("<---2calr--->",var_calr_int2);
+	printf("!end!");
+	return (var_calr_int1-var_calr_int2);
+}
+
+void test_char{
+	const char cons_char_char = 'a';
+	char var_char_char;
+	printf("<---test_char");
+	var_char_char='b';
+	printf("<--test_char-->",cons_char_char);
+	printf("<--test_char-->",var_char_char);
+	printf("<--test_char-->",cons_char_char-var_char_char);
+	printf("test_char--->");
+}
+
+int test_fu_fuc{
+	int m;
+    m=++2;
+    printf("<--1test_fu_fuc-->",m);
+    m=-2;
+    printf("<--2test_fu_fuc-->",m);
+    m=--2;
+    printf("<--3test_fu_fuc-->",m);
+    m=-+2;
+    printf("<--4test_fu_fuc-->",m);
+    m=+2;
+    printf("<--5test_fu_fuc-->",m);
+    printf("<--6test_fu_fuc-->",-m);
+	return (1);
+}
+
+void test_char_exs
+{
+	char test_char[100];
+	char sin_char;
+	printf("<---test_char_exs");
+	outer_char[1]='a';
+	test_char[1]='b';
+	sin_char='c';
+	out_sin_c = 'd';
+	printf("a=",outer_char[1]);
+	printf("'a'=",(outer_char[1]));
+	printf("b=",test_char[1]);
+	printf("'b'=",(test_char[1]));
+	printf("c=",sin_char);
+	printf("'c'=",(sin_char));
+	printf("d=",out_sin_c);
+	printf("'d'=",(out_sin_c));
+	printf("e=",out_cons_sin_c);
+	printf("'e'=",(out_cons_sin_c));
+	printf('f');
+	printf(('f'));
+	printf("test_char_exs--->");
+}
+
+
+void main()
+{
+	const int main_cons_num = 20,main_cons_num2 = 30;
+	const char main_cons_char = 'b';
+	int main_var_num1,main_var_num2,main_var_array[100],main_i;
+	char main_var_char1,main_var_char2;
+	printf("<-----main");
+	test_array;
+	test_char;
+	test_gcd;
+	test_char_exs;
+	printf("<--9main-->",test_calr(2,3));
+	printf("<--10main-->",test_calr(1,test_calr(2,3)));
+	printf("<--11main-->",test_fu_fuc);
+    printf("<--12main-->",-test_fu_fuc);
+    printf("<--13main-->",main_var_array[34]+main_cons_num*main_cons_num2-(main_var_num1/(main_var_num2+1)-300)
+    					  +2324*main_var_num2*34-0+main_i);
+	printf("main----->");
+	return;
+}

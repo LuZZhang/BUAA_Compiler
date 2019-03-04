@@ -1,0 +1,72 @@
+const int outest_cons_num=5;
+const char out_cons_sin_c = 'e';
+const int cons_out_int_num1=12;const int cons_out_int_num2=55;
+const char outest_cons_char = '+';
+const int abb = +2,bcb = -234;
+const char char2 = '_';
+const char outest_cons_char2 = 'z';
+int outest_var_num,nnn;
+char outest_var_char;
+char outer_char[20];
+char out_sin_c;
+int var_out_array_int1[100],var_out_array_int2[200];
+int var_out_int_num1,var_out_int_num2;
+char var_out_char;
+
+void HHH{
+	printf('a');
+	printf("HHhhHH!");
+}
+
+int gcd(int m,int n){
+	int r,q; 
+	q = m/n;
+	r = m - q*n;
+	if(r==0) return (n);
+	else gcd(n,r); 
+}
+
+void test_gcd{
+	int m[67],n[87],res[344],swap,i,j;
+	int mm,nn;
+    	printf("<---test_gcd");
+	;
+	for(i = 0;i<outest_cons_num;i=i+1){
+		scanf(mm,nn);
+		m[i]=mm;
+		n[i]=nn;
+	}
+	j=0;
+	while(j < outest_cons_num) {
+		if(m[j]>n[j])
+		{
+			swap = m[j];
+			m[j] = n[j];
+			n[j] = swap;
+		}
+		res[j] = gcd(m[j],n[j]);
+       	j = j + 1
+	}
+	for(i = 0;i<outest_cons_num;i=i+1){
+		printf("res[",i);
+		printf("]=",res[i);
+		printf(" ");
+	}
+	printf("test_gcd--->");
+
+
+itt
+
+void main(
+{
+	const int main_cons_num = 20,main_cons_num2 = 30;
+	const char main_cons_char = 'b';
+	int main_var_num1,main_var_num2,main_var_array[100],main_i;
+	char main_var_char1,main_var_char2;
+	printf("<-----main");
+	hhh;
+	test_gcd;
+	printf("main----->");
+
+	return;
+}

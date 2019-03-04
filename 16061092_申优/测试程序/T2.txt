@@ -1,0 +1,117 @@
+const int outest_cons_num=5;
+const char out_cons_sin_c = 'e';
+const int cons_out_int_num1=12;const int cons_out_int_num2=55;
+const char outest_cons_char = '+';
+const int abb = +2,bcb = -234;
+const char char2 = '_';
+const char outest_cons_char2 = 'z';
+int outest_var_num,nnn;
+char outest_var_char;
+char outer_char[20];
+char out_sin_c;
+int var_out_array_int1[100],var_out_array_int2[200];
+int var_out_int_num1,var_out_int_num2;
+char var_out_char;
+
+int gcd(int m,int n){
+	int r,q; 
+	q = m/n;
+	r = m - q*n;
+	if(r==0) return (n);
+	else gcd(n,r); 
+}
+
+void test3{
+	outest_var_num = 0;
+	printf("<---test3");
+	if(outest_var_num) printf("<--if_0_WA-->");
+	else printf("<--if_0_AC-->");
+	printf("<--outest_cons_char=",outest_cons_char);
+	printf("-->");
+	if(outest_cons_char) printf("<--if_char2ascii_AC-->");
+	else printf("<--if_char2ascii_WA-->");
+	printf("test3--->");
+	return;
+}
+
+char test4_char{
+	printf("<--test4_char-->");
+	return ('c');
+	printf("<--test4_char_WA-->");
+}
+
+int test4_int{
+	printf("<--test4_int-->");
+	return (123);
+	printf("<--test4_int_WA-->");
+}
+
+int test5{
+	const int test5_cons_num = 5;
+	int test5_var_num,test5_nums[100],test5_i;
+	printf("<---test5");
+	test5_var_num = test5_cons_num * 3;
+	for(test5_i=0;test5_i<100;test5_i=test5_i+1){
+		test5_nums[test5_i] = test5_i;
+	}
+	if(+test5_cons_num+test5_nums[13]*(test5_nums[10]/2)-'a'+gcd(13,17) == -26){
+		printf("<--test5_AC-->");
+	}
+	else {
+		printf("test5_WA",+test5_cons_num+test5_nums[13]*(test5_nums[10]/2)-'a'+gcd(13,17));
+		printf("WA_1=",test5_cons_num);
+		printf("WA_2=",(test5_nums[13]*test5_nums[10]/2));
+		printf("WA_3=",-'a'+gcd(13,17));
+	}
+	printf("test5--->");
+	return(+test5_cons_num+test5_nums[13]*(test5_nums[10]/2)-'a'+gcd(13,17));
+}
+
+void test6{
+	printf("<---test6");
+	printf("");
+  	printf(" !#$%&'()*+,-./");
+  	printf("0123456789:;<=>?");	
+	printf("@ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+  	printf("[\]^_`abcdefghijklmnopqrstuvwxyz{|}~");
+  	printf("\n");
+	printf("<--test6-->",+-12345);
+	printf(00010);
+	printf(-12321);
+	printf(-00000);
+
+	printf("<--test6-->",'+');
+  	printf('-');
+ 	printf('*');
+  	printf('/');
+    
+    printf('_');
+  	printf('m');
+  	printf('o');
+  	printf('r');
+  	printf('z');
+	
+	printf('0');
+  	printf('3');
+  	printf('7');
+  	printf('9');	
+
+  	printf("test6--->");
+}
+
+void main()
+{
+	const int main_cons_num = 20,main_cons_num2 = 30;
+	const char main_cons_char = 'b';
+	int main_var_num1,main_var_num2,main_var_array[100],main_i;
+	char main_var_char1,main_var_char2;
+	printf("<-----main");
+	test3; 
+	printf(test4_int);
+	printf(test4_char);
+	test5;
+	{printf("<--4main-->",test5);}
+	test6;
+	printf("main----->");
+	return;
+}

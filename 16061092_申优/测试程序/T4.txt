@@ -1,0 +1,112 @@
+const int outest_cons_num=5;
+const char out_cons_sin_c = 'e';
+const int cons_out_int_num1=12;const int cons_out_int_num2=55;
+const char outest_cons_char = '+';
+const int abb = +2,bcb = -234;
+const char char2 = '_';
+const char outest_cons_char2 = 'z';
+int outest_var_num,nnn;
+char outest_var_char;
+char outer_char[20];
+char out_sin_c;
+int var_out_array_int1[100],var_out_array_int2[200];
+int var_out_int_num1,var_out_int_num2;
+char var_out_char;
+
+int gcd(int m,int n){
+	int r,q; 
+	q = m/n;
+	r = m - q*n;
+	if(r==0) return (n);
+	else gcd(n,r); 
+}
+
+void test_add{
+	const int cons_test_add_int1=23;
+	int var_test_add_int;
+	char var_test_add_char;
+	printf("<---test_add");
+	var_test_add_int=0;
+	var_out_int_num1=cons_out_int_num1+cons_test_add_int1;
+	var_out_int_num2=var_out_int_num1+cons_out_int_num2;
+	var_test_add_int=(var_test_add_int+cons_test_add_int1)*(cons_test_add_int1/10);
+	printf("<--1add-->",var_out_int_num2);
+	printf("<--2add-->",var_test_add_int);
+	printf("test_add--->");
+}
+
+void test_num{
+	printf("<---test_num");
+	printf("<--1num-->",'a');
+	printf("<--2num-->",+-223);
+	printf("<--3num-->",+-34+23);
+	printf("<--4num-->",234+'x');
+	printf("<--5num-->",2);
+	printf("test_num--->");
+}
+
+void test_sub{
+	const int cons_test_sub_int = 35;
+	const int cons_test_sub_int1= 90;	
+	int var_test_sub_int;
+	printf("<---test_sub");
+	var_test_sub_int=0;
+	var_out_int_num1=cons_out_int_num1-cons_test_sub_int1;
+	var_out_int_num2=var_out_int_num1-cons_out_int_num2;
+	var_test_sub_int=var_test_sub_int-cons_test_sub_int1;
+	printf("<--1sub-->",var_out_int_num2);
+	printf("<--2sub-->",var_test_sub_int);
+	printf("test_sub--->");
+}
+
+void test_mult{
+	const int cons_test_mult_int1=23;
+	int var_test_mult_int;
+	printf("<---test_mult");
+	var_test_mult_int=1;
+	var_out_int_num1=cons_out_int_num1*cons_test_mult_int1;
+	var_out_int_num2=var_out_int_num1*cons_out_int_num2;
+	printf("<--0mul-->",var_test_mult_int);
+	var_test_mult_int=var_test_mult_int*cons_test_mult_int1;
+	printf("<--1mul-->",var_out_int_num2);
+	printf("<--2mul-->",var_test_mult_int);
+	printf("test_mult--->");
+}
+
+void test_div{
+	const int cons_test_div_int = 35;
+	int var_test_div_int;
+	printf("<---test_div");
+	var_test_div_int=100;
+	var_out_int_num1=cons_out_int_num1/cons_test_div_int;
+	var_out_int_num2=var_out_int_num1/cons_out_int_num2;
+	var_test_div_int=var_test_div_int/cons_test_div_int;
+	printf("<--1div-->",var_out_int_num2);
+	printf("<--2div-->",var_test_div_int);
+	printf("test_div--->");
+}
+
+void main()
+{
+	const int main_cons_num = 20,main_cons_num2 = 30;
+	const char main_cons_char = 'b';
+	int main_var_num1,main_var_num2,main_var_array[100],main_i;
+	char main_var_char1,main_var_char2;
+	printf("<-----main");
+	main_var_num1=1;
+	main_var_num2=2;
+	printf("<--5main-->",main_cons_char);
+	printf("<--6main-->",+main_var_num1*main_cons_num+main_cons_char*main_cons_num2);
+	printf("<--7main-->",-main_cons_char+outest_cons_char);
+	for(main_i=0;main_i<100;main_i=main_i+1){
+		main_var_array[main_i]=2*main_i;
+	}
+	printf("<--8main-->",+outest_cons_char+main_var_array[13]*(main_var_array[10]/2)-'a'+gcd(13,17));
+	test_add;
+	test_num;
+	test_sub;
+	test_mult;
+	test_div;
+	printf("main----->");
+	return;
+}

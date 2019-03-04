@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1546612951 source:e:\uni_3_l\编译\编译课设\优化后目标程序\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
